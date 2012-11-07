@@ -115,7 +115,7 @@ if [ "$GRAILS_VERSION" != "1.3.7" ] ; then
 fi
 
 rm -rf $CACHE_DIR/*
-rm -rf $HOME/.grails/projects/*
+rm -rf $HOME/.grails/*
 
 COMPILECMD="grails -Divy.default.ivy.user.dir=$CACHE_DIR compile --non-interactive"
 echo "-----> Executing $COMPILECMD"
