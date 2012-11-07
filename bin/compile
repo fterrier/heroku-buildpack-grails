@@ -114,7 +114,9 @@ if [ "$GRAILS_VERSION" != "1.3.7" ] ; then
     BUILDCMD_OPT="-plain-output"
 fi
 
-rm -r $HOME/.grails/$GRAILS_VERSION
+if [ -d $HOME/.grails/$GRAILS_VERSION ]; then
+    rm -r $HOME/.grails/$GRAILS_VERSION
+fi
 
 COMPILECMD="grails -Divy.default.ivy.user.dir=$CACHE_DIR compile --non-interactive"
 echo "-----> Executing $COMPILECMD"
